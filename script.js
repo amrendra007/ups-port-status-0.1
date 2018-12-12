@@ -35,9 +35,8 @@ async function formatData() {
     }
 }
 
-//fn to fetch current user todo list from locl storage and display
-function fetchTodos(keysArray, valuesArray ) {
-    
+
+function handleUi(keysArray, valuesArray ) {
     for(let n = 0; n < keysArray.length; n++) {
         let ele = document.createElement("li");
         ele.textContent = keysArray[n].trim();
@@ -56,7 +55,7 @@ function fetchTodos(keysArray, valuesArray ) {
         const data  = await formatData();
         console.log('data', data);
 
-        fetchTodos(Object.keys(data), Object.values(data))
+        handleUi(Object.keys(data), Object.values(data))
     } catch (error) {
         console.log('error', error);
         
