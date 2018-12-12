@@ -5,9 +5,9 @@ const getData = () => {
         try {
             const response = await fetch('./status_file.txt');
             // console.log('response', response);
-            const responseJson = await response.text();
+            const responseText = await response.text();
             // console.log('responseJson', responseJson);
-            resolve(responseJson);
+            resolve(responseText);
         } catch (error) {
             reject(error);
         }
