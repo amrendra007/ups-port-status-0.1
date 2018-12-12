@@ -62,6 +62,27 @@ function handleUi(keysArray, valuesArray ) {
     }
 })();
 
+// handle button click
+document.querySelector('body').addEventListener('click', function(event) {
+
+    if (event.target.className.toLowerCase() === 'action') {
+        console.log(event.target.value);
+
+        let targetBtn = event.target.value
+        
+        if (targetBtn === 'OP') {
+            
+            console.log(event.target.textContent)
+            
+        }
+
+        if (targetBtn === 'UP') {
+            
+            console.log(targetBtn)
+        }
+	}
+});
+
 
 
 
